@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+% Uncomment to enable Chinese; needs XeLaTeX
+% \usepackage{ctex}
+
+
+% Default biblatex style used for the publication list is APA6. If you wish to use a different style or pass other options to biblatex you can change them here. 
+\PassOptionsToPackage{style=ieee,sorting=ydnt,uniquename=init,defernumbers=true}{biblatex}
+
+
+\usepackage{settings}
+\usepackage{hyperref}
+
+
+
+
+
+
+% Change the fonts if you want
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+\usepackage{fontspec} 
+%% You can use \setmainfont etc; I'm just using these font packages here because they provide OpenType fonts for use by XeLaTeX/LuaLaTeX anyway
+\usepackage[p,osf,swashQ]{cochineal}
+\usepackage[medium,bold]{cabin}
+\usepackage[varqu,varl,scale=0.9]{zi4}
+\else % If you're using pdfLaTeX or latex
+\usepackage[T1]{fontenc}
+\usepackage[p,osf,swashQ]{cochineal}
+\usepackage{cabin}
+\usepackage[varqu,varl,scale=1]{zi4}
+\fi
+
+% Change the page margins if you want
+ \geometry{left=2.1cm,right=2.1cm,top=1cm,bottom=1cm}
+
+% Change the colours if you want
+% \definecolor{SwishLineColour}{HTML}{00FFFF}
+% \definecolor{MarkerColour}{HTML}{0000CC}
+
+% Change the item prefix marker if you want
+% \prefixmarker{$\diamond$}
+
+%% Photo is only shown if "fullonly" is included
+
+\excludecomment{fullonly}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\leftheader{%
+{\LARGE\bfseries Vraj Gami, B.Sc}\\[0.4em]
+{\small
+\href{mailto:gami@unbc.ca}{gami@unbc.ca} \quad|\quad
+\href{https://github.com/VrajGami}{github.com/VrajGami} \quad|\quad
+\href{https://gamivraj.com}{gamivraj.com} \quad|\quad
+\href{https://www.linkedin.com/in/vraj-gami}{linkedin.com/in/vraj-gami}
+}
+}
+
+
+
+\rightheader{~}
+
+
+\begin{document}
+\makeheaders[c]
+%% --- Professional Summary (2-3 sentences, wrapped and small) ---
+\makerubrichead{Professional Summary}
+Information Security Analyst and Cloud Architect with experience in designing secure enterprise systems, managing incident response, and implementing compliance frameworks. Proven expertise in Windows Server environments, network security, and automated vulnerability management. Skilled in bridging the gap between technical security operations and organizational policy to ensure data integrity and regulatory compliance.
+\par\medskip
+
+
+\makerubric{employment}
+\makerubric{education}\makerubric{skills}
+\makerubric{misc}
+\makerubric{publications}
+
+
+
+% \makerubric{referee}
+% \makerubric{referee-full}
+% \makerubric{reference}
+
+\end{document}
